@@ -711,6 +711,7 @@ section-team-icon {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -730,6 +731,8 @@ section-team-icon {
   background-color: var(--accent-color);
   cursor: pointer;
   margin: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal:hover {
@@ -740,23 +743,18 @@ section-team-icon {
 .modal-title {
   display: flex;
   justify-content: center;
-  margin-top: 72px;
+  /* margin-top: 72px; */
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
-}
-
-.modal-form {
-  padding: 16px 24px;
-}
-
-.modal-form-person {
+  margin-bottom: 16px;
 }
 
 .modal-field {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .input-modal {
@@ -766,6 +764,7 @@ section-team-icon {
   width: 100%;
   padding-left: 36px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-modal:is(:hover, :focus) {
   /* border: 1px solid var(--logo-color); */
@@ -782,6 +781,7 @@ section-team-icon {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-modal:focus + .icon-form {
@@ -798,6 +798,7 @@ section-team-icon {
   letter-spacing: 0.04em;
   resize: none;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-modal-comment:is(:hover, :focus) {
@@ -810,8 +811,7 @@ section-team-icon {
   line-height: calc(16 / 12);
   letter-spacing: 0.04em;
   color: var(--subtle-text);
-  padding-top: 8px;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 textarea {
   resize: none;
@@ -831,13 +831,13 @@ textarea {
 
 .policy {
   display: flex;
-}
-
-.policy-text {
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.04em;
   color: #757575;
+}
+
+.policy-text {
 }
 
 .policy span {
@@ -850,6 +850,8 @@ textarea {
   justify-content: center;
   align-items: center;
   fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .policy span {
@@ -865,14 +867,9 @@ textarea {
   color: var(--btn-hover-color);
 }
 
-.modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
 .submit-btn {
+  display: block;
+  margin: 0 auto;
   width: 170px;
   border: none;
   padding: 16px 32px;
@@ -895,10 +892,10 @@ textarea {
 }
 
 .subscribe-footer {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
-.subscribe-field {
+.subscribe-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
